@@ -118,7 +118,7 @@ Submission Repo Structure
         		│         └── output1.txt
         		│         └── output2.txt
         		│         └── output3.txt
-			└── yan-test-2
+			|-- yan-test-2
             		├── paymo_input
         		│    │   └── batch_payment.txt
         		│    │   └── stream_payment.txt
