@@ -63,15 +63,7 @@ Search the graph is implemented by queue, for which the average time complexcity
 
 
 ####How do I test the performance?
-It would be useful to know the performance of each functions, therefore, time library was used to measure the timing:
-
-Functions that have been tested for time efficiency: 
-
-bfs_search:  is a core function to determine the degree of friendship network. For the two 200MB+ input data, the average time for each bfs_search function call for 1000 computations is 0.0018s.  // nth degree
-
-reading the input batch_payment and stream_payment csv files: take time xx s. // how long does it take to build the graph? 
-
-reset function: reset the attributes of the visited nodes in the graph:  take time x s.  
+ 
 
 
 
