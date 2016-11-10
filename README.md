@@ -103,13 +103,6 @@ Submission Repo Structure
 	├── run.sh
 	├── src
 	│  	└── antifraud.py
-	├── paymo_input (conceptually included)
-	│   └── batch_payment.csv
-	|   └── stream_payment.csv
-	├── paymo_output
-	│   └── output1.txt
-	|   └── output2.txt
-	|   └── output3.txt
 	└── insight_testsuite
 	 	   ├── run_tests.sh
 		   └── tests
@@ -121,7 +114,24 @@ Submission Repo Structure
         		│       └── output1.txt
         		│       └── output2.txt
         		│       └── output3.txt
-        		└── yan-test
+        		└── yan-test-1
+            		├── paymo_input
+        		│     │   └── batch_payment.csv
+        		│     │   └── stream_payment.csv
+        		│     │  
+        		│     └── paymo_output
+        		│         └── output1.txt
+        		│         └── output2.txt
+        		│         └── output3.txt
+			└── yan-test-2
+            		 ├── paymo_input
+        		 │    │   └── batch_payment.txt
+        		 │    │   └── stream_payment.txt
+        		 │    └── paymo_output
+        		 │        └── output1.txt
+        		 │        └── output2.txt
+        		 │        └── output3.txt
+		         └── yan-test-3
             		 ├── paymo_input
         		     │   └── batch_payment.csv
         		     │   └── stream_payment.csv
