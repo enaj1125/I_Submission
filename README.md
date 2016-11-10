@@ -23,7 +23,8 @@ When a payment happens between people who are not a nth degree connection, a war
 
 The social network is represented as a undirected graph, with each user id defined as a node. This makes a perfect application of an object-oriented programming design. In python, two classes were defined: 
 
-###Node class: represent each individual user, with the following attributes defined:  
+###Node class: represent each individual user
+the following attributes defined:  
 
 self._name = name          # user id
 
@@ -34,9 +35,8 @@ self._visited = False      # whether node has been visited
 self._neighbor_list = []   # all its neighbors' id
 	
 
-###Graph class:represent user network using a hash table, with each user id as key and each node (Node type) as value.   
-
-with the following methods defined: 
+###Graph class:represent user network using a hash table
+Each user id as key and each node (Node type) as value, with the following methods defined: 
 
 add(self, node_id1, node_id2)                    # check if node exsit and add to graph
 
