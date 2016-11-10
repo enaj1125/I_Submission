@@ -21,7 +21,7 @@ When a payment happens between people who are not a nth degree connection, a war
 
 [Back to Table of Contents] (README.md#table-of-contents)
 
-The social network is represented as a undirected graph, with each user id defined as a node. This makes a perfect application of an object-oriented programming design. In python, two classes were defined: 
+The social network is represented as a undirected graph, with each user id defined as a node. This makes a perfect application of an object-oriented programming design. A library social_graph was developed to define two classes: 
 
 ###Node class: represent each individual user
 the following attributes defined:  
@@ -96,6 +96,8 @@ Submission Repo Structure
 	├── run.sh
 	├── src
 	│  	└── antifraud.py
+	|       └── social_graph.py (library)  
+	|
 	└── insight_testsuite
 	 	   ├── run_tests.sh
 		   └── tests
