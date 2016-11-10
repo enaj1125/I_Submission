@@ -138,11 +138,11 @@ def main():
             output2.write(flag + "\n")
 
             result = PayGraph.bfs_search(stream_data[i][1], stream_data[i][2], 4)
-            PayGraph.add(stream_data[i][1], stream_data[i][2])
             PayGraph.reset()
             flag = "trusted" if result else "unverified"   
             output3.write(flag + "\n")
-
+            
+            PayGraph.add(stream_data[i][1], stream_data[i][2])
 
         except Exception as e:
             print("Error in processing stream error in line", i, e)
