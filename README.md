@@ -49,20 +49,17 @@ The search of n-th degree friend was implemented by a Breadth-first search (BFS)
 
 ####Why not Depth-first search (DFS)? 
 
-DFS and BFS are two commonly used algrithm to search through graph. DFS is often more effcient than BFS in terms of time complexcity. However, in case, since the soical network is a undirected graph, which possibly contains cycles. Therefore, BFS is the best to implement this search task. 
+DFS and BFS are two commonly used algrithm to search through graph. DFS is often more effcient than BFS in terms of time complexcity. However, in case, since the soical network is a undirected graph, which frequently contains cycles. Cycle would make it difficult to determine the right degree of connection, since it is possible to visit the node from both directions.  Therefore, BFS is the best to implement this search task. 
 
-##Computation Efficiency and Optimization
+###How the algrithm is the optimized for computation efficiency
+####1. Use appropriate data structure
 
-###How the data structure best work for this case?
-Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1). 
+Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1).
 
 Search the graph is implemented by queue, for which the average time complexcity of insertion and deletion is O(1).
 
-###How the algrithm best optimized? 
+####2. optimize the search function reset only visited node
 
-
-
-####How do I test the performance?
  
 
 
@@ -70,9 +67,9 @@ Search the graph is implemented by queue, for which the average time complexcity
 ##Additional features could help detect fraud
 1) The degree of friend can be set to detect a n-th degree connection network, this would be helpful if interested in examining connections with higher degrees. 
 
-2)
 
-##How to run the program
+
+##How to run or test the program
 ####command line for csv input files: 
 
 python antifraud.py batch_payment.csv stream_payment.csv output1.txt output2.txt output3.txt
@@ -85,6 +82,8 @@ python antifraud.py batch_payment.txt stream_payment.txt output1.txt output2.txt
 
 ./run.sh
 
+####To run the tests:  
+./run_tests.sh
 
 ##Repo directory structure
 [Back to Table of Contents] (README.md#table-of-contents)
