@@ -2,6 +2,8 @@
 ##Challenge Summary
 
 This project implements three features of a "digital wallet", which aims to prevent fraudulent payment requests from untrusted users. 
+
+Developed by Yan Jiang, Nov, 2016, Python 3. 
  
 ####Feature 1
 When a payment happens between people who are not a 1st degree connection, a warning should be sent, and the output file 1 should have "unverified". 
