@@ -3,9 +3,6 @@ import sys
 from social_graph import Graph, Node
 
 def main():  
-    
-    input_batch, input_stream, outputfile1, outputfile2, outputfile3 = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]  
-    
     input_batch, input_stream, outputfile1, outputfile2, outputfile3 = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]
     
     # read in the exsiting data and build a graph
