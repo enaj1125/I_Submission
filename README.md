@@ -38,11 +38,11 @@ self._neighbor_list = []   # all its neighbors' id
 
 with the following methods defined: 
 
-add(self, node_id1, node_id2)    
+add(self, node_id1, node_id2)                    # check if node exsit and add to graph
 
-reset(self)
+reset(self)                                       # only reset the nodes that have been visited, not the whole graph. 
 
-bfs_search(self, node_id1, node_id2, max_degree)
+bfs_search(self, node_id1, node_id2, max_degree)  # search two nodes within the max_degree in the graph
 
 
 
@@ -56,18 +56,18 @@ DFS and BFS are two commonly used algrithm to search through graph. DFS is often
 ###How the algrithm is the optimized for computation efficiency
 ####1. Use appropriate data structure
 
-Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1).
-
-Search the graph is implemented by queue, for which the average time complexcity of insertion and deletion is O(1).
+Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1).Search the graph is implemented by queue. The average time complexcity of insertion and deletion in queue is O(1). 
 
 ####2. optimize the search function reset only visited node
-
+Reset the graph nodes is a step that consume lots of time. Record the visited nodes and only reset that part could improve the efficiency. 
  
 
 
-
 ##Additional features could help detect fraud
-1) The degree of friend can be set to detect a n-th degree connection network, this would be helpful if interested in examining connections with higher degrees. 
+
+In the future, the degree of friend can be set to detect a n-th degree connection network, this would be helpful if interested in examining connections with higher degrees. 
+
+To implement any n-degree connection warning, call the function bfs_search(self, node_id1, node_id2, max_degree) and set the max_degree to n. 
 
 
 
