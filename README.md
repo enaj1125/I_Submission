@@ -54,14 +54,13 @@ The search of n-th degree friend was implemented by a Breadth-first search (BFS)
 DFS and BFS are two commonly used algrithm to search through graph. DFS is often more effcient than BFS in terms of time complexcity. However, in case, since the soical network is a undirected graph, which frequently contains cycles. Cycle would make it difficult to determine the right degree of connection, since it is possible to visit the node from both directions.  Therefore, BFS is the best to implement this search task. 
 
 ###How the algrithm is the optimized for computation efficiency
-####1. Use appropriate data structure
+####1. Use appropriate data structure coupled with search algrithm
 
-Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1).Search the graph is implemented by queue. The average time complexcity of insertion and deletion in queue is O(1). 
+Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1). Search the graph is implemented by queue. The average time complexcity of insertion and deletion in queue is O(1). 
 
-####2. optimize the search function reset only visited node
-Reset the graph nodes is a step that consume lots of time. Record the visited nodes and only reset that part could improve the efficiency. 
+####2. Save time by only reset visited nodes
+Reset the nodes on the whole graph can consume lots of time. Record the visited nodes and only reset that part could improve the efficiency. 
  
-
 
 ##Additional features could help detect fraud
 
