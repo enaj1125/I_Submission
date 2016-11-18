@@ -60,7 +60,7 @@ DFS and BFS are two commonly used algrithm to search through graph. DFS is often
 ####BFS time complexity analysis: 
 The worst case is visiting all n-degree nodes and edges, which is {V+E}, where V, E are vertex and edges insides the n-degree network. 
 
-###How the algrithm is the optimized for computation efficiency
+##How the algrithm is the optimized for computation efficiency
 ####1. Use appropriate data structure coupled with search algrithm
 
 Since the social network can grow very large, to make sure it is efficient to search a node, a hash table is the best choice, since the average time complexcity of a search is O(1). Search the graph is implemented by queue. The average time complexcity of insertion and deletion in queue is O(1). 
