@@ -24,7 +24,7 @@ When a payment happens between people who are not a nth degree connection, a war
 The social network is represented as a undirected graph, with each user id defined as a node.This problem can be viewed as searching the distance between two nodes in an undirected graph. This is the best fit for BFS, while DFS tends to become complex and rise potential errors. 
 
 
-####Select data structure for graph: 
+####Select data structure: 
 The graph should support two functions: 1) search nodes; 2) modify (insert). Therefore, a hash table is a best candidate for this job. The time complexity of doing search, insert, are both O(1). The space complexity is {V + E}.  
 
 A library social_graph was developed to define two classes: 	
