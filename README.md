@@ -21,7 +21,22 @@ When a payment happens between people who are not a nth degree connection, a war
 
 [Back to Table of Contents] (README.md#table-of-contents)
 
-The social network is represented as a undirected graph, with each user id defined as a node. This makes a perfect application of an object-oriented programming design. A library social_graph was developed to define two classes: 
+The social network is represented as a undirected graph, with each user id defined as a node.This problem can be viewed as searching the distance between two nodes in an undirected graph. This is the best fit for BFS, while DFS tends to become complex and rise potential errors. 
+
+
+###Select data structure for graph: 
+The graph should support two functions: 1) search nodes; 2) modify (insert). Therefore, a hash table is a best candidate for this job. The time complexity of doing search, insert, are both O(1). The space complexity is {V + E}.  
+
+A library social_graph was developed to define two classes: 	
+
+###Graph class:represent user network using a hash table
+Each user id as key and each node (Node type) as value, with the following methods defined: 
+
+add(self, node_id1, node_id2)                    # check if node exsit and add to graph
+
+reset(self)                                       # only reset the nodes that have been visited, not the whole graph. 
+
+bfs_search(self, node_id1, node_id2, max_degree)  # search two nodes within the max_degree in the graph
 
 ###Node class: represent each individual user
 the following attributes defined:  
@@ -33,17 +48,6 @@ self._degree = degree      # degree of potential friend,
 self._visited = False      # whether node has been visited
 
 self._neighbor_list = []   # all its neighbors' id
-	
-
-###Graph class:represent user network using a hash table
-Each user id as key and each node (Node type) as value, with the following methods defined: 
-
-add(self, node_id1, node_id2)                    # check if node exsit and add to graph
-
-reset(self)                                       # only reset the nodes that have been visited, not the whole graph. 
-
-bfs_search(self, node_id1, node_id2, max_degree)  # search two nodes within the max_degree in the graph
-
 
 
 ##Search the Social Network Graph
@@ -52,6 +56,9 @@ The search of n-th degree friend was implemented by a Breadth-first search (BFS)
 ####Why not Depth-first search (DFS)? 
 
 DFS and BFS are two commonly used algrithm to search through graph. DFS is often more effcient than BFS in terms of time complexcity. However, in case, since the soical network is a undirected graph, which frequently contains cycles. Cycle would make it difficult to determine the right degree of connection, since it is possible to visit the node from both directions.  Therefore, BFS is the best to implement this search task. 
+
+####BFS time complexity analysis: 
+The worst case is visiting all n-degree nodes and edges, which is {V+E}, where V, E are vertex and edges insides the n-degree network. 
 
 ###How the algrithm is the optimized for computation efficiency
 ####1. Use appropriate data structure coupled with search algrithm
